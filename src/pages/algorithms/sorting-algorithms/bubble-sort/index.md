@@ -108,6 +108,31 @@ public class bubble-sort {
 }
 ```
 
+### Optimized Implementation:
+The above function always runs O(n^2) time even if the array is sorted. It can be optimized by stopping the algorithm if inner loop didn’t cause any swap.
+
+Optimized Algorithm written in C
+
+```C
+void bubbleSort(int a[], int n) { 
+   int i, j; 
+   bool swapped; 
+   for (i = 0; i < n - 1; i++) { 
+     swapped = false; 
+     for (j = 0; j < n-i-1; j++) { 
+        if (a[j] > a[j+1]) { 
+           swap(&a[j], &a[j+1]); 
+           swapped = true; 
+        } 
+     } 
+     if (swapped == false) // if no swaps, stop algorithm
+        break; 
+   } 
+} 
+```
+#### Worst and Average Case Time Complexity: O(n*n).
+#### Best Case Time Complexity: O(n). Best case occurs when array is already sorted.
+
 ### More Information
 <!-- Please add any articles you think might be helpful to read before writing the article -->
 - [Wikipedia](https://en.wikipedia.org/wiki/Bubble_sort)
