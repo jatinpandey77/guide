@@ -140,7 +140,16 @@ void insert(int data) {
    }
 }        
 ```
+## Delete Operation
 
+Remove operation on binary search tree is more complicated than insertion and search. 
+Basically, in can be divided into two stages - search for a node to remove and if the node is found then run remove algorithm.
+
+When we delete a node, three possibilities arise.
+  * Node to be deleted is leaf
+  * Node to be deleted has only one child
+  * Node to be deleted has two children
+  
 Binary search trees (BSTs) also give us quick access to predecessors and successors.
   Predecessors can be described as the node that would come right before the node you are currently at.
    - To find the predecessor of the current node, look at the rightmost/largest leaf node in the left subtree.
