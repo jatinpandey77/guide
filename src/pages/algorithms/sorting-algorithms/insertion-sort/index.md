@@ -148,11 +148,29 @@ public int[] insertionSort(int[] arr)
       }
       return arr;
 ```
+The C example is shown below:
+```
+void insertionSort(int a[], int n) { 
+   int i, key, j; 
+   for (i = 1; i < n; i++) 
+   { 
+       key = a[i]; 
+       j = i-1; 
+       while (j >= 0 && a[j] > key) { 
+           a[j+1] = a[j]; 
+           j = j-1; 
+       } 
+       a[j+1] = key; 
+   } 
+} 
+```
 
 ### Properties:
 * Space Complexity: O(1)
 * Time Complexity: O(n*n)
 * Stable: Yes
+### Uses:
+Insertion sort is used when number of elements is small. It can also be useful when input array is almost sorted, only few elements are misplaced in complete big array.
 
 #### Other Resources:
 - [Wikipedia](https://en.wikipedia.org/wiki/Insertion_sort)
